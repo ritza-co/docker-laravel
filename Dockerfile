@@ -11,7 +11,6 @@ RUN docker-php-ext-configure opcache --enable-opcache && \
     docker-php-ext-install pdo pdo_mysql
 
 COPY --from=build /app /var/www/html
-COPY .env.prod /var/www/html/.env
 
 RUN php artisan config:cache && \
     php artisan route:cache && \
