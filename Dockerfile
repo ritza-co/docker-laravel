@@ -1,6 +1,6 @@
 FROM composer:2.0 as build
 COPY . /app/
-RUN composer install --prefer-dist --no-dev --no-interaction --ignore-platform-reqs
+RUN composer install --prefer-dist --no-dev --optimize-autoloader --no-interaction --ignore-platform-reqs
 
 FROM php:8.1.9-fpm-alpine as production
 
