@@ -3,7 +3,7 @@ COPY . /app/
 RUN composer install --prefer-dist --no-dev --optimize-autoloader --no-interaction --ignore-platform-reqs
 
 FROM php:8.1-apache-buster as production
-RUN echo "ServerName localhost:8000" >> /etc/apache2/apache2.conf
+RUN echo "ServerName 0.0.0.0" >> /etc/apache2/apache2.conf
 
 ENV APP_ENV=production
 ENV APP_DEBUG=false
