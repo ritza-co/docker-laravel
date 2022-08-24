@@ -18,4 +18,4 @@ RUN php artisan config:cache && \
     chmod 777 -R /var/www/html/storage/ && \
     chown -R www-data:www-data /var/www/ 
 
-CMD ["php", "artisan", "serve", "--host=0.0.0.0"]
+CMD ["php", "artisan", "serve", "--host=127.0.0.1"]
