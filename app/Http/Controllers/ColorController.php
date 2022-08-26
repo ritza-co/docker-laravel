@@ -22,10 +22,10 @@ class ColorController extends Controller
         // 2. Print the hex code of the closest color with a name e.g "#01826B"
         echo $result["hex"] . "\n";
 
-        return response()->json($result["name"]);
+        return response()->json(["message" => $result["name"]], 200);
     }
     public function hello()
     {
-        return response()->json("Hello World from Laravel & Docker");
+        return response()->json(["message" => "Hello World from Laravel & Docker"], 200);
     }
 }
