@@ -24,4 +24,8 @@ class ColorController extends Controller
 
         return response()->json($result["name"]);
     }
+    public function hello()
+    {
+        return response()->json("Hello World from Laravel & Docker");
+    }
 }
