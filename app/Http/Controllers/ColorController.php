@@ -16,13 +16,7 @@ class ColorController extends Controller
 
         $result = $instance->name($hexcode);
 
-        // 1. Print the human name e.g "Deep Sea"
-        echo $result["name"] . "\n";
-
-        // 2. Print the hex code of the closest color with a name e.g "#01826B"
-        echo $result["hex"] . "\n";
-
-        return response()->json(["message" => $result["name"]], 200);
+        return response()->json(["hex" => $result["hex"], "name" => $result["name"]], 200);
     }
     public function hello()
     {
